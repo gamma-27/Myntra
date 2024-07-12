@@ -1,0 +1,82 @@
+.Reel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: yellow;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  .outfit-container {
+    position: relative;
+    width: 375px; /* Width of a typical phone screen */
+    height: 667px; /* Height of a typical phone screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    border: 5px solid #d4af37; /* Elegant border color */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .outfit-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Slight rounding to fit within the border */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Adjusted transition */
+  }
+  
+  .outfit-image.scrolling {
+    opacity: 0.5; /* Initial opacity to start with */
+    transform: translateY(100%) scale( modify ) another  First
+  }
+  
+  .heart-overlay {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+  
+  .heart {
+    font-size: 25px;
+    
+    transition: transform 0.2s, color 0.2s;
+    pointer-events: auto;
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Lighter shadow */
+   
+  }
+  
+  
+  .heart.active {
+    color: red;
+    text-shadow: none; /* Remove the glow effect */
+  }
+  
+  
+  .outfit-container:active .heart {
+    transform: scale(1.2);
+  }
+  
+  .like-count {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  .outfit-image {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  
